@@ -184,6 +184,7 @@ textarea {
     line-height: 1.428571429;
     color: #555;
   }
+@media screen and (max-width: 500px){
 img#pro {
     width: 400px;
     height: 300px;
@@ -191,6 +192,12 @@ img#pro {
     border: 8px solid rgb(228, 186, 186);
     border-radius: 15px;
     float: left;
+}
+img#pro{
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
 }
 img#staff{
     width: 200px;
