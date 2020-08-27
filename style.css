@@ -32,6 +32,12 @@ ul {
     border-radius: 15px;
     text-align: center;
 }
+@media screen and (max-width: 500px){
+  ul{
+    display: list-item;
+    list-style: none;
+  }
+}
 li {
     list-style: none;
     width: 110px;
@@ -184,7 +190,14 @@ textarea {
     line-height: 1.428571429;
     color: #555;
   }
+table{
+  display: flex;
+}
 @media screen and (max-width: 500px){
+  table,tr,td{
+    display: block;
+  }
+}
 img#pro {
     width: 400px;
     height: 300px;
@@ -193,6 +206,7 @@ img#pro {
     border-radius: 15px;
     float: left;
 }
+@media screen and (min-width: 500px){
 img#pro{
     width: 300px;
     height: 300px;
