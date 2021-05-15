@@ -1,3 +1,15 @@
+*{
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+}
+@keyframes bg-color {
+  0% { background-color: #e998db; }
+  20% { background-color: #b6f0d0; }
+  40% { background-color: #fcdabe; }
+  60% { background-color: #aff2f5; }
+  80% { background-color: #ecc4fc; }
+  100% { background-color: #f3aaba; }
+}
 body {
     color: #FFFACD;
     font-family: cursive;
@@ -9,15 +21,6 @@ body {
     background-color: #f392ee;
     animation: bg-color 10s infinite;
     -webkit-animation: bg-color 10s infinite;
-  }
-
-  @keyframes bg-color {
-    0% { background-color: #e998db; }
-    20% { background-color: #b6f0d0; }
-    40% { background-color: #fcdabe; }
-    60% { background-color: #aff2f5; }
-    80% { background-color: #ecc4fc; }
-    100% { background-color: #f3aaba; }
   }
 #he{
     border-radius: 15px;
@@ -32,29 +35,34 @@ ul {
     border-radius: 15px;
     text-align: center;
 }
-@media screen and (max-width: 500px){
-  ul{
-    display: list-item;
-    list-style: none;
-  }
-}
 li {
     list-style: none;
-    width: 110px;
+    width: 100vw;
     padding: 24px;
-    display: block;
     color: rgba(179, 18, 93, 0.918);
     text-align: center;
 }
+@media screen and (max-width: 800px){
+  li {
+    list-style: none;
+    width: 100vw;
+    padding: 5px;
+    color: rgba(179, 18, 93, 0.918);
+    text-align: center;
+}
+}
 h2 {
     text-align: center;
-    
 }
-#pro {
+table {
     display: flex;
-    float: left;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 800px){
+  table {
+    display: flex;
+    flex-direction: column;
+}
+}
 #menu {
     width: 800px;
     height: 600px;
@@ -63,13 +71,26 @@ h2 {
     margin-top: 30px;
     opacity: 0.8;
 }
-#menu{
-    width: 300px;
-    height: 300px;
-    margin: auto;
+@media screen and (max-width: 800px){
+  #menu {
+    width: 80vw;
+    height: 70vw;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-top: 30px;
+    opacity: 0.8;
 }
 }
-div.warap {margin-left: 70px;}
+.warap table{
+  display: flex;
+  margin-left: 70px;
+}
+@media screen and (max-width: 800px){
+  .warap table{
+    flex-direction: column;
+    margin-left: 70px;
+  }
+}
 aside#sideber {
     float: left;
     width: 50%;
@@ -88,16 +109,8 @@ aside#sideberr {
     margin: 20px auto;
     cursor: pointer;
   }
-
-  @import url(https://fonts.googleapis.com/css?family=Raleway:900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:900);
 @import url(https://fonts.googleapis.com/css?family=Slabo+27px);
-
-body{
-    background : #CCCCCC;
-}
-* {
-  font-family : Raleway;
-}
 .fein a{
     font-family: 'Slabo 27px', serif;
   text-decoration : none;
@@ -190,14 +203,6 @@ textarea {
     line-height: 1.428571429;
     color: #555;
   }
-table{
-  display: flex;
-}
-@media screen and (max-width: 500px){
-  table,tr,td{
-    display: block;
-  }
-}
 img#pro {
     width: 400px;
     height: 300px;
@@ -205,13 +210,6 @@ img#pro {
     border: 8px solid rgb(228, 186, 186);
     border-radius: 15px;
     float: left;
-}
-@media screen and (min-width: 500px){
-img#pro{
-    width: 300px;
-    height: 300px;
-    margin: auto;
-}
 }
 img#staff{
     width: 200px;
@@ -313,5 +311,10 @@ footer ul {
 }
 footer li {
     padding: 5px 5px 5px 80px;
+}
+@media screen and (max-width: 800px){
+  footer li {
+    padding: 0;
+}
 }
 small {color: mediumvioletred;}
